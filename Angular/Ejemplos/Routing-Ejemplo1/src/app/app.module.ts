@@ -8,6 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
 
+// Segundo paso creamos las rutas
 const rutas: Routes = [
   { path: '', component: HomeComponent },
   { path: 'contacto', component: ContactoComponent }
@@ -22,7 +23,7 @@ const rutas: Routes = [
   ],
   imports: [
     BrowserModule,
-    // Importamamos RouterModule
+    // Tercer paso Importamamos RouterModule y le pasamos las rutas
     RouterModule.forRoot(rutas)
   ],
   providers: [],
