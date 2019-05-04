@@ -33,5 +33,9 @@ form-control
 btn btn-success
 col-sm-offset-2
 
+ajax
+debug de angular
+
+
 
 

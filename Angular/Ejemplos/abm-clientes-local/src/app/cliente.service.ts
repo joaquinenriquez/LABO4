@@ -16,6 +16,7 @@ export class ClienteService {
 
   constructor() {
 
+    // Creamos un par de grupos de prueba
     this.grupos = [
       {
         id: 0,
@@ -38,10 +39,14 @@ export class ClienteService {
       }
 
     ];
+
+    // Inicializamos el Array de clientes
+    this.clientes = [];
+
   }
 
   // #region Métodos
-  getGrupo() {
+  getGrupos() {
     return this.grupos;
   }
 
