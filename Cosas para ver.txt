@@ -1,4 +1,8 @@
 <header>
+<nav>
+<ul>
+<li>
+<span>
 <section>
 <article>
 <aside>
@@ -36,6 +40,8 @@ col-sm-offset-2
 ajax
 debug de angular
 
+map
+filter
 
-
+as Tipo (para declarar variables)
 
