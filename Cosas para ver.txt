@@ -12,6 +12,8 @@ Elementos contenedores????
 <thead>
 <tbody>
 <a>
+<filedset>
+<legend>
 
 Que pasa cuando no la cuenta no da 12?
 
