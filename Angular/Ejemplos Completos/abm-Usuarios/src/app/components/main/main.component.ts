@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { GrillaComponent } from '../grilla/grilla.component';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  @ViewChild('grilla') private grilla: GrillaComponent; 
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  agregar(event) {
+    this.grilla.cargarLista();
+  } 
+  
 }

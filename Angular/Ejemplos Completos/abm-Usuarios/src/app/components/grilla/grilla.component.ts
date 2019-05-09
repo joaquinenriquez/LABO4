@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { IEntidad } from 'src/app/models/ientidad.model';
 
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-grilla',
@@ -13,13 +15,15 @@ export class GrillaComponent implements OnInit {
   /* #region  Atributos */
 
   listadoEntidades: IEntidad[];
+  listadoEntidades$: Observable<IEntidad[]>
 
   /* #endregion */
 
   constructor(private servicioUsuarios: UsuarioService) { }
 
   ngOnInit() {
-    this.cargarLista();
+    //this.cargarLista();
+    this.cargrLista2();
   }
 
   public cargarLista() {
@@ -33,4 +37,8 @@ export class GrillaComponent implements OnInit {
       });
   }
 
+  public cargrLista2(){
+    this.listadoEntidades$ = this.servicioUsuarios.TraerTodos();
+    this.listadoEntidades$.subscribe(entidades => this.listadoEntidades = entidades);
+  }
 }

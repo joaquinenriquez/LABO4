@@ -26,7 +26,6 @@ export class AltaComponent implements OnInit {
 
   onSubmit() {
     this.unaEntidad = this.userForm.value;
-    this.unaEntidad.id = 32;
 
     this.miUsuarioService.CargarUno(this.unaEntidad)
       .then(
