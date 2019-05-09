@@ -1,29 +1,31 @@
 <div class="container">
     <table class="table table-striped thead-light table-hover">
-      <caption>User Details</caption>
+      <caption>Entidad Detalles</caption>
       <thead>
           <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>User Name</th>
-              <th>Email</th>
-              <th>Phone</th>
-              <th>Website</th>
+              <th>Id</th>
+              <th>Campo1</th>
+              <th>Campo2</th>
+              <th>Campo3</th>
+              <th>Foto</th>
+              <!-- <th>Phone</th>
+              <th>Website</th> -->
               <th>Edit</th>
               <th>Delete</th>
           </tr>
       </thead>
       <tbody>
-          <tr *ngFor = "let user of users; index as i">
-              <td> {{user.id}} </td>
-              <td> {{user.name}} </td>
-              <td> {{user.username}} </td>
-              <td> {{user.email}} </td>
+          <tr *ngFor = "let entidad of listadoEntidades; index as i">
+              <td> {{entidad.id}} </td>
+              <td> {{entidad.campo1}} </td>
+              <td> {{entidad.campo2}} </td>
+              <td> {{entidad.campo3}} </td>
+              <td><img src="../../../assets/img/{{entidad.id}}.jpg" alt="" border=3 height=100 width=100></td>
 
-              <td> {{user.phone}} </td>
-              <td> {{user.website}} </td>
-              <td><span class="fa fa-edit" style = "color:blue" (click)="edittUser(user,i)"></span></td>
-              <td><span class="fa fa-trash" style = "color:red" (click)="removeEmp(i)"></span></td>
+              <!-- <td> {{user.telefono}} </td>
+              <td> {{user.paginaWeb}} </td> -->
+              <td><span class="fa fa-edit" style = "color:blue" (click)="editarEntidad(entidad,i)"></span></td>
+              <td><span class="fa fa-trash" style = "color:red" (click)="borrarEntidad(i)"></span></td>
           </tr>
       </tbody>
     </table>

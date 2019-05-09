@@ -1,29 +1,25 @@
 import { Injectable, OnInit } from '@angular/core';
-import { MiHTTPService } from './mi-http.service';
+import { HttpBaseService } from './http-base.service';
+import { Observable } from 'rxjs';
+import { Usuario } from '../models/usuario.model';
+import { IEntidad } from '../models/ientidad.model';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class UsuarioService implements OnInit  {
 
-  usuarios: any = [];
-  url = 'https://jsonplaceholder.typicode.com/users';
+  constructor(private http: HttpBaseService) { }
 
-  constructor(private http: MiHTTPService) { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-    this.getUsuarios();
-    console.log('sdadsadas');
+  public TraerTodos(): Observable<IEntidad[]> {
+    return this.http.httpGetO<IEntidad[]>('/entidadGrupoRuta/');
   }
 
-  getUsuarios() {
-    this.http.getObservable(this.url)
-    .subscribe((data: any) => {
-      this.usuarios = data;
-      console.log(this.usuarios);
-    });
+  public CargarUno(unaEntidad: IEntidad): Promise<Object> {
+    return this.http.httpPostP('/entidadGrupoRuta/', unaEntidad);
   }
-
-
 
 }

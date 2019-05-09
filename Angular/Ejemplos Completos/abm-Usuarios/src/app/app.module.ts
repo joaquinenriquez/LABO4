@@ -9,11 +9,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { MiHTTPService } from './services/mi-http.service';
 import { UsuarioService } from './services/usuario.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MainComponent } from './components/main/main.component';
 import { AltaComponent } from './components/alta/alta.component';
+import { HttpBaseService } from './services/http-base.service';
 
 
 @NgModule({
@@ -32,7 +32,7 @@ import { AltaComponent } from './components/alta/alta.component';
     ReactiveFormsModule
 
   ],
-  providers: [MiHTTPService, UsuarioService],
+  providers: [HttpBaseService, UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
