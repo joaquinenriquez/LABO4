@@ -12,3 +12,6 @@ Alt + i
 Cambiar al CSS del componente TS [require angular2-switcher]
 Alt + u
 (si volvemos a presionar volvemos al archivo anterior)
+
+Duplicar Linea
+Alt + Shift + Flecha arriba (o abajo)
