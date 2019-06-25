@@ -44,6 +44,18 @@ debug de angular
 
 map
 filter
+flexbox css
 
 as Tipo (para declarar variables)
 
+data-toggle
+data-target
+Modales
+
+input type=file (para cargar archivos)
+ngTemplate
+elementRef
+Viewchild
+
+
+Object.assign
