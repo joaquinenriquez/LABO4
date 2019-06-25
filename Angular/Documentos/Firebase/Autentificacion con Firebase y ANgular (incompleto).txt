@@ -1,0 +1,17 @@
+1. Crear proyecto en consola web de firebase
+2. Ir a Proyect Overview, registrar la app y copiar el cdn
+3. En src/enviroments/enviroment.ts dentro de la constante enviroment creamos un atributo llamado firebaseConfig y pegamos el valor del cdn (entre llaves)
+4. Instalamos Firebase y AngularFire
+npm i firebase @angular/fire -S
+5. Hacemos las siguientes importaciones:
+//Firebase 
+import { environment } from '../environments/environment';
+import {AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+
+6. Agregamos los siguientes imports
+  imports: [
+	...
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
+  ],
