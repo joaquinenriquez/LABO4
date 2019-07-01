@@ -1,0 +1,21 @@
+Actualizar Angular 8
+
+1. Instalar la ultima version de npm
+npm install -g npm@latest
+
+2. Borramos la cache de npm
+npm cache clean --force
+
+3. Deshabilitamos las auditorias de seguridad
+npm set audit false
+
+4. Desinstalamos angular cli
+npm uninstall -g angular-cli
+npm uninstall -g @angular/cli
+
+5. Volvemos a borrar la cache
+npm cache clean --force
+
+6. Instalamos Angular CLI
+npm install -g @angular/cli
+
