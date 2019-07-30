@@ -73,3 +73,9 @@ padEnd
 Agregar una fuente (font)
 
 filter
+
+cellspacing
+Permisos de base de datos Firebase
+
+      <mat-form-field>
+
